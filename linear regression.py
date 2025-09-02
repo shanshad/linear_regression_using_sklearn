@@ -39,7 +39,7 @@ import pandas as pd
 from sklearn import linear_model
 
 reg=linear_model.LinearRegression()
-df=pd.read_excel(r"C:\Users\LENOVO\Desktop\Datasets for machine lerning\house price monore.xlsx")
+df=pd.read_excel(r"data\house price monore.xlsx")
 
 # here we are reading the data which is in an excel sheet. if data was in csv format, you could have used read_csv command.
 # if you are using excel and an IDE you might face issues with reading excel files. i would recommend you to install openpyxl
@@ -67,7 +67,7 @@ print(f"the intercept of regression is {reg.intercept_}")
 # since we got the relation between features and labels we can use this relation to predict the labels of a new dataset which only have features
 # !! make sure that second datasets column titles also matches with first datasets features titles
 
-out_put_needed=pd.read_excel(r"C:\Users\LENOVO\Desktop\Datasets for machine lerning\area only dataset.xlsx")
+out_put_needed=pd.read_excel(r"data\area only dataset.xlsx")
 
 # here we are reading and storing our second dataset into a variable named out_put_needed
 
@@ -80,7 +80,7 @@ out_put_needed['price']=k
 # this line is uesd to put that array into the out_put_needed dataframe by creating a new column named price
 #now data frame is updated with area and price columns, but it is only in the python memmory.we need to update the excel sheet also.
 
-out_put_needed.to_excel(r"C:\Users\LENOVO\Desktop\Datasets for machine lerning\area only dataset.xlsx")
+out_put_needed.to_excel(r"data\area only dataset.xlsx")
 
 #!! before running the code make sure that you have not kept the second excel sheet open while running the program
 # if it is open python won't be able to modify the sheet and update it
